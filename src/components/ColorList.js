@@ -1,5 +1,5 @@
 import React from "react";
-
+import App from "./App";
 function ColorList() {
   const colors = [
     "firebrick",
@@ -8,6 +8,21 @@ function ColorList() {
     "darkslategray",
     "hotpink",
   ];
+
+  const users = [
+    { id: 1, firstName: "Duane", lastName: "Watson" },
+    { id: 2, firstName: "Duane", lastName: "Johnson" },
+  ];
+  
+  const userHeadings = users.map((user) => {
+    return <h1 key={user.id}>{user.firstName}</h1>;
+  });
+
+  const fib = [0, 1, 1, 2, 3, 5];
+
+const fibList = fib.map((number, index) => {
+  return <div key={index}>{number}</div>;
+});
 
   return (
     <div>
